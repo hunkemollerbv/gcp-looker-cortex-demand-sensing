@@ -79,7 +79,7 @@ and CustomersMD.Client_MANDT= "@{CLIENT}"),
 
   DemandPlan AS (
   SELECT
-    DemandPlan.MaterialNumber AS Product,
+    DemandPlan.CatalogItemId AS Product,
     DemandPlan.WeekStart AS Date,
     DemandPlan.CustomerId AS Customer,
     DemandPlan.DemandPlan AS Sales,
