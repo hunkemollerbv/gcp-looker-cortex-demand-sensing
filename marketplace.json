@@ -1,0 +1,35 @@
+{
+  "label": "Cortex Data Foundation for SAP - Demand Sensing Dashboards",
+  "category_label": "Models",
+  "branding": {
+    "image_uri": "https://marketplace-api.looker.com/block-icons/cortex_icon.png",
+     "tagline": "Google Cloud Cortex Demand Sensing provides predefined solution content to help you get started quickly with a cloud based demand sensing solution leveraging the best of our Data Cloud services like BigQuery, Vertex AI, and Looker together with SAP ERP and additional data sources like Google Trends, Weather, and more."
+    },
+  "constants": {
+    "CONNECTION_NAME": {
+      "label": "Connection Name",
+      "value_constraint": "connection"
+    },
+    "GCP_PROJECT": {
+      "label": "GCP Project Name"
+    },
+    "REPORTING_DATASET": {
+      "label": "Reporting Dataset Name"
+    },
+    "K9_REPORTING_DATASET": {
+      "label": "K9 Reporting Dataset Name"
+    },
+    "CLIENT": {
+      "label": "SAP Client ID"
+    },
+    "years_of_past_data": {
+      "label": "Years Of Past Data"
+    }
+  },
+      "models": [
+        {
+            "name": "cortex_demand_sensing",
+            "connection_constant": "CONNECTION_NAME"
+        }
+    ]
+}
