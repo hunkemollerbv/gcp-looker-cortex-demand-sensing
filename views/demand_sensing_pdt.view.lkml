@@ -78,7 +78,7 @@ and CustomersMD.Client_MANDT= "@{CLIENT}"),
 
   DemandPlan AS (
   SELECT
-    DemandPlan.MaterialNumber AS Product,
+    DemandPlan.CatalogItemId AS Product,
     DemandPlan.WeekStart AS Date,
     DemandPlan.CustomerId AS Customer,
     DemandPlan.DemandPlan AS Sales,
@@ -175,7 +175,6 @@ WHERE
    `@{GCP_PROJECT}.@{REPORTING_DATASET}.ProductHierarchiesMD`) ProductHierarchyText
   ON left(MaterialsMD.ProductHierarchy_Prdha, 6 ) = ProductHierarchyText.Hierarchy_Prodh
     AND MaterialsMD.Client_MANDT = ProductHierarchyText.Client_MANDT
-    AND ProductHierarchyText.Level_STUFE='3'
     AND ProductHierarchyText.Language_SPRAS='E'
   )
 SELECT
