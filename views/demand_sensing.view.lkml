@@ -175,7 +175,6 @@ WHERE
    `@{GCP_PROJECT}.@{REPORTING_DATASET}.ProductHierarchiesMD`) ProductHierarchyText
   ON left(MaterialsMD.ProductHierarchy_Prdha, 6 ) = ProductHierarchyText.Hierarchy_Prodh
     AND MaterialsMD.Client_MANDT = ProductHierarchyText.Client_MANDT
-    AND ProductHierarchyText.Level_STUFE='3'
     AND ProductHierarchyText.Language_SPRAS='E'
   )
 SELECT
